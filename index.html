@@ -1,0 +1,529 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>EURO TIM Bydgoszcz - pielgrzymki, wycieczki objazdowe i szkolne, wynajem autokarów</title>
+<meta name="description" content="Biuro podróży EURO TIM z Bydgoszczy: pielgrzymki autokarowe i samolotowe, wycieczki objazdowe i szkolne, wynajem autokarów Setra i Mercedes Tourismo. Tel. 52 340 41 08.">
+<meta name="theme-color" content="#E30613">
+<link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+<link rel="preload" as="image" href="img/hero-m-480.webp" imagesrcset="img/hero-m-480.webp 480w, img/hero-m-820.webp 820w" imagesizes="125vw" media="(max-width:700px)" fetchpriority="high">
+<link rel="preload" as="image" href="img/hero-1600.webp" imagesrcset="img/hero-1024.webp 1024w, img/hero-1600.webp 1600w" imagesizes="100vw" media="(min-width:701px)" fetchpriority="high">
+<link rel="preload" as="font" type="font/woff2" href="fonts/archivo-rdzen.woff2" crossorigin>
+<style>
+@font-face{font-family:"Archivo";font-weight:400 800;font-stretch:100% 112%;font-display:swap;src:url(fonts/archivo-rdzen.woff2) format("woff2")}
+:root{--red:#E30613;--red2:#BF0511;--ink:#0B0B0C;--t:#16181B;--s:#545B63;--g:#F1F3F5;--l:#DCE0E4;--dk:#121315;--hh:72px;--gut:clamp(16px,3.4vw,64px);--w:1320px}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:var(--hh);-webkit-text-size-adjust:100%}
+body{margin:0;font-family:"Archivo",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;font-size:17px;line-height:1.6;color:var(--t);background:#fff;overflow-x:hidden}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+h1,h2,h3{margin:0;line-height:1.06;letter-spacing:-.015em;font-weight:760;font-stretch:108%}
+h1{font-size:clamp(36px,4.4vw,82px);text-wrap:balance}
+h2{font-size:clamp(31px,3.5vw,54px)}
+h3{font-size:clamp(21px,1.7vw,26px);line-height:1.15;letter-spacing:-.01em}
+p{margin:0}
+.wrap{width:min(var(--w),100% - 2*var(--gut));margin-inline:auto}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+/* przycisk: skos jak kursywa logo */
+.btn{display:inline-flex;align-items:center;gap:12px;background:var(--red);color:#fff;font-weight:650;font-size:18px;line-height:1.2;text-decoration:none;padding:17px 38px 17px 24px;border:0;cursor:pointer;font-family:inherit;clip-path:polygon(0 0,100% 0,calc(100% - 14px) 100%,0 100%);transition:background .2s,transform .2s}
+.btn:hover{background:var(--red2)}
+.btn:active{transform:translateY(1px)}
+.btn.cz{background:var(--ink)}
+.btn.cz:hover{background:#2a2c30}
+/* motyw: linia trasy przechodzaca przez czerwony pierscien (jak w logo) */
+.trakt{display:block;position:relative;height:18px;width:min(460px,78%);margin-top:20px}
+.trakt:before{content:"";position:absolute;left:0;right:0;top:8px;height:2px;background:currentColor;opacity:.9;transform:skewY(-1.2deg)}
+.trakt:after{content:"";position:absolute;left:72%;top:0;width:18px;height:18px;border:3px solid var(--red);border-radius:50%;box-sizing:border-box}
+.na-ciemnym .trakt:before{opacity:.45}
+/* naglowek */
+.top{position:sticky;top:0;z-index:50;height:var(--hh);background:#fff;border-bottom:1px solid transparent;transition:border-color .2s,box-shadow .2s}
+.top.sc{border-bottom-color:var(--l);box-shadow:0 8px 24px rgba(10,12,16,.06)}
+.top .wrap{height:100%;display:flex;align-items:center;gap:24px}
+.logo{display:block;flex:none;line-height:0}
+.logo img{width:260px;height:30px}
+.menu{display:flex;gap:2px;margin-left:auto}
+.menu a{text-decoration:none;font-weight:550;font-size:16px;padding:10px 13px;color:var(--t);position:relative}
+.menu a:after{content:"";position:absolute;left:13px;right:13px;bottom:4px;height:2px;background:var(--red);transform:scaleX(0);transform-origin:left;transition:transform .25s}
+.menu a:hover:after,.menu a.on:after{transform:scaleX(1)}
+.menu a.on{color:var(--ink)}
+.top .tel{display:inline-flex;align-items:center;gap:9px;text-decoration:none;font-weight:700;font-size:17px;color:#fff;background:var(--ink);padding:12px 30px 12px 18px;white-space:nowrap;clip-path:polygon(0 0,100% 0,calc(100% - 12px) 100%,0 100%)}
+.top .tel:hover{background:var(--red)}
+.top .tel svg{width:17px;height:17px;flex:none}
+.burger{display:none;width:46px;height:46px;border:1px solid var(--l);background:#fff;cursor:pointer;padding:0;align-items:center;justify-content:center;flex:none}
+.burger i{display:block;width:20px;height:2px;background:var(--t);position:relative;transition:background .2s}
+.burger i:before,.burger i:after{content:"";position:absolute;left:0;width:20px;height:2px;background:var(--t);transition:transform .25s}
+.burger i:before{top:-6px}.burger i:after{top:6px}
+.top.open .burger i{background:transparent}
+.top.open .burger i:before{transform:translateY(6px) rotate(45deg)}
+.top.open .burger i:after{transform:translateY(-6px) rotate(-45deg)}
+/* pierwszy ekran: haslo na niebie, autokar na drodze, ponizej trasa najblizszych wyjazdow */
+.hero{min-height:calc(100svh - var(--hh));display:flex;flex-direction:column;background:#fff}
+.foto{position:relative;flex:1 1 auto;display:flex;color:#fff;background:#2c5c9c;overflow:hidden;min-height:460px}
+.foto picture,.foto picture img{position:absolute;inset:0;width:100%;height:100%}
+.foto picture img{object-fit:cover;object-position:50% 81%}
+.foto:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(4,14,34,.62) 0%,rgba(4,14,34,.38) 32%,rgba(4,14,34,0) 56%)}
+.foto .in{position:relative;z-index:2;width:min(var(--w),100% - 2*var(--gut));margin:0 auto;padding:clamp(28px,5.5vh,64px) 0 40px;display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr);gap:24px 64px;align-items:end;align-self:flex-start}
+.foto h1{text-shadow:0 2px 24px rgba(0,10,30,.25)}
+.foto .lead{font-size:clamp(17px,1.35vw,21px);line-height:1.5;color:rgba(255,255,255,.95);max-width:31em}
+.foto .cta{margin-top:26px}
+.trasa{background:#fff;border-bottom:1px solid var(--l)}
+.trasa .wrap{display:flex;align-items:stretch;gap:28px}
+.trasa-t{flex:none;align-self:center;font-weight:700;font-size:16px;line-height:1.25;width:7.2em}
+.trasa ol{list-style:none;margin:0;padding:0;display:grid;grid-auto-flow:column;grid-auto-columns:minmax(150px,1fr);flex:1;min-width:0;position:relative;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none}
+.trasa ol::-webkit-scrollbar{display:none}
+.trasa ol:before{content:"";position:absolute;left:0;top:27px;height:2px;background:var(--ink);width:var(--dl,100%)}
+.trasa li{scroll-snap-align:start;position:relative}
+.trasa a{display:block;text-decoration:none;padding:16px 14px 16px 0;height:100%}
+.trasa a:before{content:"";display:block;width:24px;height:24px;border:3.5px solid var(--red);border-radius:50%;box-sizing:border-box;margin-bottom:8px;transition:transform .2s}
+.trasa a:hover:before{transform:scale(1.15)}
+.trasa time{display:block;font-weight:700;font-size:15px;color:var(--red);font-variant-numeric:tabular-nums;line-height:1.3}
+.trasa b{display:block;font-weight:650;font-size:16px;line-height:1.25;margin-top:2px}
+.trasa a:hover b{text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:3px}
+/* sekcje */
+.sek{padding:clamp(64px,8vw,120px) 0}
+.szare{background:var(--g)}
+.ciemne{background:var(--dk);color:#fff}
+.glowa{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:20px 40px;margin-bottom:clamp(30px,3.6vw,52px)}
+.glowa .opis{max-width:36em;color:var(--s);font-size:18px;margin-top:18px}
+.ciemne .glowa .opis{color:rgba(255,255,255,.75)}
+/* karuzela */
+.kar{position:relative}
+.tor{display:grid;grid-auto-flow:column;grid-auto-columns:calc((100% - 3*22px)/4);gap:22px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;padding-bottom:4px;cursor:grab}
+.tor::-webkit-scrollbar{display:none}
+.tor.drag{scroll-snap-type:none;cursor:grabbing;user-select:none}
+.tor>*{scroll-snap-align:start;min-width:0}
+.nawig{display:flex;align-items:center;gap:10px}
+.nawig button{width:50px;height:50px;border:1.5px solid currentColor;background:transparent;color:inherit;cursor:pointer;display:grid;place-items:center;padding:0;transition:background .2s,color .2s}
+.nawig button:hover{background:var(--ink);color:#fff;border-color:var(--ink)}
+.ciemne .nawig button:hover{background:#fff;color:var(--ink);border-color:#fff}
+.nawig button:disabled{opacity:.3;cursor:default;background:transparent;color:inherit}
+.nawig svg{width:20px;height:20px}
+.licz{font-variant-numeric:tabular-nums;font-size:15px;color:var(--s);min-width:4.5em;text-align:center}
+.ciemne .licz{color:rgba(255,255,255,.7)}
+/* karty wyjazdow */
+.wyj{background:#fff;display:flex;flex-direction:column;height:100%;border:1px solid var(--l)}
+.wyj .zd{aspect-ratio:4/3;overflow:hidden;background:#cfd6dd}
+.wyj .zd img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
+.wyj:hover .zd img{transform:scale(1.03)}
+.wyj .tr{padding:22px 22px 24px;display:flex;flex-direction:column;flex:1}
+.wyj h3{font-size:24px}
+.wyj .pod{color:var(--s);font-size:15.5px;line-height:1.45;margin-top:6px}
+@media (min-width:701px){.wyj .pod{min-height:4.35em}.wyj h3{min-height:2.3em;display:flex;align-items:flex-end}}
+.wyj .dane{margin:16px 0 0;padding:14px 0 0;border-top:1px solid var(--l);display:grid;gap:4px;font-size:15.5px;line-height:1.4}
+.wyj .dane div{display:flex;justify-content:space-between;gap:12px}
+.wyj .dane dt{color:var(--s)}
+.wyj .dane dd{margin:0;font-weight:600;text-align:right;font-variant-numeric:tabular-nums}
+.wyj .cena{margin-top:auto;padding-top:18px;display:flex;align-items:baseline;flex-wrap:wrap;gap:4px 10px}
+.wyj .cena b{font-size:26px;font-weight:760;font-stretch:106%;letter-spacing:-.01em;color:var(--ink)}
+.wyj .cena span{font-size:14.5px;color:var(--s);line-height:1.35}
+.wyj .zap{margin-top:16px;display:inline-flex;align-items:center;gap:10px;font-weight:650;color:var(--red);text-decoration:none;font-size:16px;align-self:flex-start}
+.wyj .zap svg{width:44px;height:14px;flex:none;transition:transform .25s}
+.wyj .zap:hover svg{transform:translateX(5px)}
+.uwaga{margin-top:22px;font-size:14.5px;color:var(--s)}
+/* oferta: wiersze ze zdjeciem na spad */
+.rzad{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);align-items:stretch;min-height:520px}
+.rzad+.rzad{margin-top:0}
+.rzad .ob{position:relative;min-height:340px;overflow:hidden}
+.rzad .ob img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.rzad .tx{padding:clamp(40px,5.5vw,96px) clamp(16px,5vw,96px);display:flex;flex-direction:column;justify-content:center;max-width:720px}
+.rzad.odw .ob{order:2}
+.rzad.odw .tx{margin-left:auto}
+.rzad p{color:var(--s);margin-top:18px;font-size:17.5px}
+.rzad h3{font-size:clamp(26px,2.4vw,38px)}
+.listy{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:6px 28px;margin-top:24px}
+.listy h4{margin:0 0 6px;font-size:15px;font-weight:700;color:var(--ink)}
+.listy ul{list-style:none;margin:0;padding:0;font-size:15.5px;line-height:1.5;color:var(--t)}
+.listy li{padding:5px 0;border-bottom:1px solid var(--l)}
+details.wiecej{margin-top:14px}
+details.wiecej summary{cursor:pointer;font-weight:650;color:var(--red);list-style:none;display:inline-flex;align-items:center;gap:8px}
+details.wiecej summary::-webkit-details-marker{display:none}
+details.wiecej summary:after{content:"+";font-size:20px;line-height:1}
+details.wiecej[open] summary:after{content:"-"}
+.rzad .btn{margin-top:28px;align-self:flex-start}
+/* flota */
+.auto{background:#1c1e21;display:flex;flex-direction:column;height:100%}
+.auto .gal{position:relative;aspect-ratio:3/2;overflow:hidden;background:#2a2d31}
+.auto .gal .pas{display:flex;height:100%;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none}
+.auto .gal .pas::-webkit-scrollbar{display:none}
+.auto .gal img{flex:0 0 100%;width:100%;height:100%;object-fit:cover;scroll-snap-align:start}
+.auto .kropki{position:absolute;left:0;right:0;bottom:10px;display:flex;justify-content:center;gap:7px;pointer-events:none}
+.auto .kropki i{width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,.55)}
+.auto .kropki i.on{background:#fff}
+.auto .tr{padding:20px 22px 24px}
+.auto h3{font-size:22px}
+.auto p{color:rgba(255,255,255,.72);font-size:15.5px;margin-top:6px}
+.auto .miejsca{margin-top:14px;display:flex;align-items:baseline;gap:10px}
+.auto .miejsca b{font-size:30px;font-weight:760;font-stretch:106%;font-variant-numeric:tabular-nums}
+.auto .miejsca span{color:rgba(255,255,255,.72);font-size:15px}
+.kontakt-auto{margin-top:clamp(40px,4vw,64px);display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr) auto;gap:24px 48px;align-items:center;padding-top:36px;border-top:1px solid rgba(255,255,255,.16)}
+.kontakt-auto p{color:rgba(255,255,255,.78)}
+.kontakt-auto a{color:#fff;font-weight:650;text-decoration:none;white-space:nowrap}
+.kontakt-auto a:hover{color:#ff6b73}
+.kontakt-auto strong{display:block;color:#fff;font-size:19px;margin-bottom:4px}
+/* o firmie */
+.firma{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(36px,5vw,88px);align-items:center}
+.firma p{color:var(--s);margin-top:18px;font-size:17.5px}
+.firma .zd{position:relative}
+.firma .zd img{width:100%;aspect-ratio:3/2;object-fit:cover}
+.firma figcaption{font-size:14px;color:var(--s);margin-top:10px}
+blockquote{margin:clamp(40px,5vw,72px) 0 0;padding:0;max-width:980px}
+blockquote p{font-size:clamp(23px,2.3vw,34px)!important;line-height:1.3!important;color:var(--ink)!important;font-weight:550;font-stretch:104%;letter-spacing:-.01em;margin:0!important}
+blockquote footer{margin-top:14px;color:var(--s);font-size:15.5px}
+/* rezerwacja */
+.kroki{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px 56px}
+.kroki h3{font-size:22px;padding-bottom:14px;border-bottom:2px solid var(--ink)}
+.kroki p{color:var(--s);margin-top:14px;font-size:16.5px}
+/* kontakt */
+.kont{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:clamp(36px,5vw,88px)}
+.dzial{padding:20px 0;border-bottom:1px solid var(--l)}
+.dzial:first-of-type{padding-top:0}
+.dzial h3{font-size:19px;margin-bottom:6px}
+.dzial p{color:var(--s);font-size:16.5px;line-height:1.65}
+.dzial a{color:var(--t);font-weight:600;text-decoration:none;white-space:nowrap}
+.dzial a:hover{color:var(--red)}
+.adres{font-size:19px;color:var(--t);font-weight:600;margin-top:22px}
+.mapa{margin-top:22px;aspect-ratio:16/9;background:var(--g);border:1px solid var(--l)}
+.mapa iframe{width:100%;height:100%;border:0;display:block}
+form.form{background:var(--g);padding:clamp(24px,3vw,44px)}
+.form h3{font-size:26px}
+.form .p{color:var(--s);margin-top:8px;font-size:16px}
+.pola{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin-top:22px}
+.pole{display:flex;flex-direction:column;gap:6px;min-width:0}
+.pole.cale{grid-column:1/-1}
+.pole label{font-size:15px;font-weight:600}
+.pole input,.pole select,.pole textarea{font:inherit;font-size:16px;padding:13px 14px;border:1px solid #c6ccd2;background:#fff;color:var(--t);border-radius:0;width:100%;min-width:0}
+.pole textarea{min-height:120px;resize:vertical}
+.pole input:focus,.pole select:focus,.pole textarea:focus{outline:2px solid var(--ink);outline-offset:0;border-color:var(--ink)}
+.form .btn{margin-top:22px}
+.form .info{margin-top:14px;font-size:14.5px;color:var(--s)}
+.form .ok{margin-top:14px;font-weight:600;color:var(--ink)}
+/* stopka */
+.stopka{background:var(--g);padding:56px 0 28px;font-size:15.5px;color:var(--s);border-top:1px solid var(--l)}
+.stopka .g{display:grid;grid-template-columns:minmax(0,1.4fr) repeat(3,minmax(0,1fr));gap:28px 40px}
+.stopka h4{margin:0 0 10px;color:var(--t);font-size:16px}
+.stopka ul{list-style:none;margin:0;padding:0;line-height:1.9}
+.stopka a{text-decoration:none}
+.stopka a:hover{color:var(--red)}
+.stopka .logo img{width:228px;height:26px}
+.stopka .dol{margin-top:40px;padding-top:20px;border-top:1px solid var(--l);display:flex;flex-wrap:wrap;gap:12px 28px;justify-content:space-between;align-items:center;font-size:14.5px}
+/* dolny pasek tel */
+.mob{display:none}
+.wylinka-badge{display:inline-flex;align-items:center;gap:.4em;color:inherit;text-decoration:none;font-size:.875em;line-height:1;opacity:.85}
+.wylinka-badge:hover,.wylinka-badge:focus-visible{opacity:1}
+.wylinka-badge:focus-visible{outline:2px solid currentColor;outline-offset:3px;border-radius:2px}
+.wylinka-badge svg{width:18px;height:18px;flex:none;overflow:visible}
+.wylinka-badge b{font-weight:600}
+.wylinka-badge .wy-old{opacity:.45;transform-origin:40px 30px;transition:transform .32s cubic-bezier(.3,.7,.4,1),opacity .32s ease-out}
+.wylinka-badge .wy-pod{opacity:0;transition:opacity .2s ease-out .08s}
+.wylinka-badge:hover .wy-old,.wylinka-badge:focus-visible .wy-old{transform:translate(9px,7px) rotate(9deg);opacity:0}
+.wylinka-badge:hover .wy-pod,.wylinka-badge:focus-visible .wy-pod{opacity:1}
+@media (prefers-reduced-motion:reduce){.wylinka-badge .wy-old,.wylinka-badge .wy-pod{transition:none}.wylinka-badge:hover .wy-old,.wylinka-badge:focus-visible .wy-old{transform:none;opacity:.45}.wylinka-badge:hover .wy-pod,.wylinka-badge:focus-visible .wy-pod{opacity:0}}
+@media (max-width:1180px){
+  .menu a{padding:10px 9px;font-size:15.5px}
+  .menu a:after{left:9px;right:9px}
+  .logo img{width:226px;height:26px}
+  .tor{grid-auto-columns:calc((100% - 2*22px)/3)}
+}
+@media (max-width:1023px){
+  :root{--hh:64px}
+  .menu{position:fixed;left:0;right:0;top:var(--hh);bottom:0;background:#fff;flex-direction:column;gap:0;padding:12px var(--gut) 24px;transform:translateX(100%);transition:transform .3s;overflow-y:auto;margin:0}
+  .top.open .menu{transform:none}
+  .menu a{font-size:20px;padding:16px 0;border-bottom:1px solid var(--l);font-weight:600}
+  .menu a:after{left:0;right:auto;width:28px;bottom:10px}
+  .burger{display:inline-flex}
+  .top .tel{margin-left:auto}
+  .foto .in{grid-template-columns:minmax(0,1fr);gap:18px}
+  .rzad{grid-template-columns:minmax(0,1fr);min-height:0}
+  .rzad .ob{min-height:0;aspect-ratio:16/9}
+  .rzad.odw .ob{order:0}
+  .rzad .tx{max-width:none;margin:0;padding:36px var(--gut) 56px}
+  .firma,.kont{grid-template-columns:minmax(0,1fr)}
+  .kontakt-auto{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+  .kontakt-auto .btn{grid-column:1/-1;justify-self:start}
+  .stopka .g{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .stopka .g>div:first-child{grid-column:1/-1}
+}
+@media (max-width:860px){
+  .tor{grid-auto-columns:calc((100% - 22px)/2)}
+  .kroki{grid-template-columns:minmax(0,1fr)}
+}
+@media (max-width:700px){
+  :root{--hh:60px}
+  body{font-size:16.5px}
+  .top .wrap{gap:10px}
+  .logo img{width:191px;height:22px}
+  .top .tel{padding:0;width:46px;height:46px;justify-content:center;clip-path:none}
+  .top .tel span{display:none}
+  .top .tel svg{width:20px;height:20px}
+  .foto{min-height:0}
+  .foto picture img{object-position:62% 100%}
+  .foto:after{background:linear-gradient(180deg,rgba(4,14,34,.7) 0%,rgba(4,14,34,.45) 40%,rgba(4,14,34,.05) 66%)}
+  .foto .in{padding:26px 0 24px;gap:14px}
+  h1{font-size:clamp(33px,9.4vw,40px)}
+  .foto .lead{font-size:16.5px}
+  .foto .cta{margin-top:24px}
+  .btn{font-size:17px;padding:16px 36px 16px 22px}
+  .trasa .wrap{display:block;width:100%}
+  .trasa-t{width:auto;padding:12px var(--gut) 0;font-size:14.5px;color:var(--s);font-weight:600}
+  .trasa ol{grid-auto-columns:46%;padding-left:var(--gut);scroll-padding-left:var(--gut)}
+  .trasa ol:before{top:25px;left:var(--gut)}
+  .trasa a{padding:10px 12px 12px 0}
+  .trasa a:before{width:22px;height:22px;margin-bottom:6px}
+  .trasa time{font-size:14px}
+  .trasa b{font-size:15px}
+  .tor{grid-auto-columns:84%;gap:14px}
+  .glowa{margin-bottom:26px}
+  .glowa .opis{font-size:16.5px}
+  .nawig{display:none}
+  .pola{grid-template-columns:minmax(0,1fr)}
+  .kontakt-auto{grid-template-columns:minmax(0,1fr)}
+  .listy{grid-template-columns:minmax(0,1fr)}
+  .mob{display:grid;grid-template-columns:1fr 1fr;position:fixed;left:0;right:0;bottom:0;z-index:40;background:#fff;border-top:1px solid var(--l);padding:8px 10px calc(8px + env(safe-area-inset-bottom));gap:8px;transform:translateY(110%);transition:transform .3s}
+  .mob.widac{transform:none}
+  .mob a{display:flex;align-items:center;justify-content:center;gap:8px;height:48px;font-weight:700;text-decoration:none;font-size:16px}
+  .mob a:first-child{background:var(--ink);color:#fff}
+  .mob a:last-child{background:var(--red);color:#fff}
+  .mob svg{width:18px;height:18px}
+  .stopka{padding-bottom:90px}
+}
+@media (min-width:1024px) and (max-height:820px){
+  .foto .in{padding-top:28px}
+  h1{font-size:clamp(36px,4.2vw,72px)}
+}
+@media (min-width:2200px){:root{--w:1680px}body{font-size:18.5px}h1{font-size:98px}.foto .lead{font-size:23px}.menu a{font-size:17.5px}.logo img{width:304px;height:35px}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+</style>
+</head>
+<body>
+<header class="top" id="top">
+  <div class="wrap">
+    <a class="logo" href="#" aria-label="EURO TIM - strona główna"><picture><source srcset="img/logo-44.webp 1x, img/logo-88.webp 2x" type="image/webp"><img src="img/logo-44.png" srcset="img/logo-44.png 1x, img/logo-88.png 2x" width="260" height="30" alt="EURO TIM"></picture></a>
+    <nav class="menu" id="menu" aria-label="Menu główne">
+      <a href="#wyjazdy">Terminy i ceny</a>
+      <a href="#pielgrzymki">Pielgrzymki</a>
+      <a href="#objazdowe">Wycieczki</a>
+      <a href="#szkolne">Szkolne</a>
+      <a href="#autokary">Wynajem autokarów</a>
+      <a href="#o-firmie">O firmie</a>
+      <a href="#kontakt">Kontakt</a>
+    </nav>
+    <a class="tel" href="tel:+48523404108" aria-label="Zadzwoń: 52 340 41 08"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6.6 3.5 9.4 4l1.3 4-2.2 1.6a12 12 0 0 0 5.9 5.9l1.6-2.2 4 1.3.5 2.8c.1.8-.5 1.6-1.3 1.6A16.6 16.6 0 0 1 3.5 5c0-.8.8-1.6 1.6-1.5Z"/></svg><span>52 340 41 08</span></a>
+    <button class="burger" id="burger" type="button" aria-label="Otwórz menu" aria-expanded="false" aria-controls="menu"><i></i></button>
+  </div>
+</header>
+
+<main>
+<section class="hero" aria-label="EURO TIM - biuro podróży i wynajem autokarów">
+  <div class="foto">
+    <picture>
+      <source media="(max-width:700px)" srcset="img/hero-m-480.webp 480w, img/hero-m-820.webp 820w" sizes="125vw">
+      <img src="img/hero-1600.webp" srcset="img/hero-1024.webp 1024w, img/hero-1600.webp 1600w" sizes="100vw" width="1600" height="1200" alt="Autokar Setra EURO TIM pod wieżą Eiffla w Paryżu" fetchpriority="high" decoding="async">
+    </picture>
+    <div class="in">
+      <h1>Podróż, która sama jest celem</h1>
+      <div>
+        <p class="lead">Pielgrzymki, wycieczki objazdowe i szkolne oraz wynajem autokarów. Biuro podróży EURO TIM z Bydgoszczy - z własnymi autokarami i sprawdzonymi pilotami, od 1976 roku.</p>
+        <div class="cta"><a class="btn" href="#wyjazdy">Zobacz terminy i ceny</a></div>
+      </div>
+    </div>
+  </div>
+  <nav class="trasa" aria-label="Najbliższe wyjazdy">
+    <div class="wrap">
+      <p class="trasa-t">Najbliższe wyjazdy</p>
+      <ol>
+        <li><a href="#w-gory"><time datetime="2026-11-20">20-22.11.2026</time><b>Góry Świętokrzyskie</b></a></li>
+        <li><a href="#w-japonia"><time datetime="2027-03-29">29.03.2027</time><b>Japonia</b></a></li>
+        <li><a href="#w-wlochy"><time datetime="2027-04-01">01.04.2027</time><b>Włochy</b></a></li>
+        <li><a href="#w-bawaria"><time datetime="2027-04-28">28.04.2027</time><b>Bawaria</b></a></li>
+        <li><a href="#w-mazury"><time datetime="2027-05-05">05.05.2027</time><b>Mazury i Litwa</b></a></li>
+        <li><a href="#w-gietrzwald"><time datetime="2027-05-08">08.05.2027</time><b>Gietrzwałd</b></a></li>
+        <li><a href="#w-meksyk"><time datetime="2027-11-10">10.11.2027</time><b>Meksyk</b></a></li>
+      </ol>
+    </div>
+  </nav>
+</section>
+
+<section class="sek szare" id="wyjazdy">
+  <div class="wrap">
+    <div class="glowa">
+      <div>
+        <h2>Terminy i ceny</h2>
+        <span class="trakt" aria-hidden="true"></span>
+        <p class="opis">Pielgrzymki autokarowe i samolotowe oraz wycieczki na najbliższe miesiące. W większości programów w cenie są przejazd, ubezpieczenie i opieka pilota.</p>
+      </div>
+      <div class="nawig" data-tor="tor-w"><button type="button" data-k="-1" aria-label="Poprzednie wyjazdy"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button><span class="licz" aria-live="polite"></span><button type="button" data-k="1" aria-label="Następne wyjazdy"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button></div>
+    </div>
+    <div class="kar">
+      <div class="tor" id="tor-w">
+        <article class="wyj" id="w-gory"><div class="zd"><img src="img/w-gory-440.webp" srcset="img/w-gory-440.webp 440w, img/w-gory-720.webp 720w" sizes="(max-width:700px) 84vw, (max-width:860px) 46vw, (max-width:1180px) 31vw, 320px" width="440" height="330" alt="Kielce, plac z piramidami przed budynkiem politechniki" loading="lazy" decoding="async" draggable="false"></div><div class="tr"><h3>Góry Świętokrzyskie</h3><p class="pod">Jesienne Góry Świętokrzyskie, 2 noclegi w hotelu 4* ze strefą wellness</p><dl class="dane"><div><dt>Termin</dt><dd>20-22.11.2026</dd></div><div><dt>Długość</dt><dd>3 dni</dd></div><div><dt>Dojazd</dt><dd>autokar</dd></div></dl><div class="cena"><b>1 100 zł/os.</b></div><a class="zap" href="#kontakt" data-temat="Wycieczka objazdowa" data-wyjazd="Góry Świętokrzyskie">Zapytaj o miejsca<svg viewBox="0 0 44 14" aria-hidden="true"><path d="M0 7.6h44" stroke="currentColor" stroke-width="2"/><circle cx="31" cy="7" r="5" fill="none" stroke="currentColor" stroke-width="2.5"/></svg></a></div></article>
+        <article class="wyj" id="w-japonia"><div class="zd"><img src="img/w-japonia-440.webp" srcset="img/w-japonia-440.webp 440w, img/w-japonia-720.webp 720w" sizes="(max-width:700px) 84vw, (max-width:860px) 46vw, (max-width:1180px) 31vw, 320px" width="440" height="330" alt="Bramy torii w świątyni Fushimi Inari w Kioto" loading="lazy" decoding="async" draggable="false"></div><div class="tr"><h3>Japonia</h3><p class="pod">Pielgrzymka śladami św. Maksymiliana Kolbego: Tokio, Kioto, Nagasaki, Akita</p><dl class="dane"><div><dt>Termin</dt><dd>29.03-08/09.04.2027</dd></div><div><dt>Długość</dt><dd>12 dni</dd></div><div><dt>Dojazd</dt><dd>samolot i autokar</dd></div></dl><div class="cena"><b>11 700 zł/os.</b><span>+ bilet lotniczy ok. 7 800 zł/os.</span></div><a class="zap" href="#kontakt" data-temat="Pielgrzymka" data-wyjazd="Japonia">Zapytaj o miejsca<svg viewBox="0 0 44 14" aria-hidden="true"><path d="M0 7.6h44" stroke="currentColor" stroke-width="2"/><circle cx="31" cy="7" r="5" fill="none" stroke="currentColor" stroke-width="2.5"/></svg></a></div></article>
+        <article class="wyj" id="w-wlochy"><div class="zd"><img src="img/w-wlochy-440.webp" srcset="img/w-wlochy-440.webp 440w, img/w-wlochy-720.webp 720w" sizes="(max-width:700px) 84vw, (max-width:860px) 46vw, (max-width:1180px) 31vw, 320px" width="440" height="330" alt="Bazylika św. Franciszka w Asyżu" loading="lazy" decoding="async" draggable="false"></div><div class="tr"><h3>Włochy</h3><p class="pod">Pielgrzymka: Padwa, Asyż, Rzym i Watykan, Pompeje, San Giovanni Rotondo, Lanciano, Cascia</p><dl class="dane"><div><dt>Termin</dt><dd>01-10.04.2027</dd></div><div><dt>Długość</dt><dd>10 dni</dd></div><div><dt>Dojazd</dt><dd>autokar</dd></div></dl><div class="cena"><b>4 950 zł/os.</b></div><a class="zap" href="#kontakt" data-temat="Pielgrzymka" data-wyjazd="Włochy">Zapytaj o miejsca<svg viewBox="0 0 44 14" aria-hidden="true"><path d="M0 7.6h44" stroke="currentColor" stroke-width="2"/><circle cx="31" cy="7" r="5" fill="none" stroke="currentColor" stroke-width="2.5"/></svg></a></div></article>
+        <article class="wyj" id="w-bawaria"><div class="zd"><img src="img/w-bawaria-440.webp" srcset="img/w-bawaria-440.webp 440w, img/w-bawaria-720.webp 720w" sizes="(max-width:700px) 84vw, (max-width:860px) 46vw, (max-width:1180px) 31vw, 320px" width="440" height="330" alt="Panorama Monachium o zachodzie słońca" loading="lazy" decoding="async" draggable="false"></div><div class="tr"><h3>Bawaria</h3><p class="pod">Pielgrzymka do Bawarii, 6 noclegów ze śniadaniami i obiadokolacjami</p><dl class="dane"><div><dt>Termin</dt><dd>28.04-04.05.2027</dd></div><div><dt>Długość</dt><dd>7 dni</dd></div><div><dt>Dojazd</dt><dd>autokar</dd></div></dl><div class="cena"><b>4 250 zł/os.</b></div><a class="zap" href="#kontakt" data-temat="Pielgrzymka" data-wyjazd="Bawaria">Zapytaj o miejsca<svg viewBox="0 0 44 14" aria-hidden="true"><path d="M0 7.6h44" stroke="currentColor" stroke-width="2"/><circle cx="31" cy="7" r="5" fill="none" stroke="currentColor" stroke-width="2.5"/></svg></a></div></article>
+        <article class="wyj" id="w-mazury"><div class="zd"><img src="img/w-mazury-440.webp" srcset="img/w-mazury-440.webp 440w, img/w-mazury-720.webp 720w" sizes="(max-width:700px) 84vw, (max-width:860px) 46vw, (max-width:1180px) 31vw, 320px" width="440" height="330" alt="Katedra i dzwonnica w Wilnie" loading="lazy" decoding="async" draggable="false"></div><div class="tr"><h3>Mazury i Litwa</h3><p class="pod">Pielgrzymka do Gietrzwałdu z wizytą na Litwie</p><dl class="dane"><div><dt>Termin</dt><dd>05-08.05.2027</dd></div><div><dt>Długość</dt><dd>4 dni</dd></div><div><dt>Dojazd</dt><dd>autokar</dd></div></dl><div class="cena"><b>1 500 zł/os.</b></div><a class="zap" href="#kontakt" data-temat="Pielgrzymka" data-wyjazd="Mazury i Litwa">Zapytaj o miejsca<svg viewBox="0 0 44 14" aria-hidden="true"><path d="M0 7.6h44" stroke="currentColor" stroke-width="2"/><circle cx="31" cy="7" r="5" fill="none" stroke="currentColor" stroke-width="2.5"/></svg></a></div></article>
+        <article class="wyj" id="w-gietrzwald"><div class="zd"><img src="img/w-gietrzwald-440.webp" srcset="img/w-gietrzwald-440.webp 440w, img/w-gietrzwald-720.webp 720w" sizes="(max-width:700px) 84vw, (max-width:860px) 46vw, (max-width:1180px) 31vw, 320px" width="440" height="330" alt="Bazylika w Gietrzwałdzie" loading="lazy" decoding="async" draggable="false"></div><div class="tr"><h3>Gietrzwałd</h3><p class="pod">150. rocznica objawień gietrzwałdzkich - wyjazd jedno- lub dwudniowy</p><dl class="dane"><div><dt>1 dzień</dt><dd>08.05.2027</dd></div><div><dt>2 dni</dt><dd>08-09.05.2027</dd></div><div><dt>Dojazd</dt><dd>autokar</dd></div></dl><div class="cena"><b>150 zł/os.</b><span>wyjazd 2-dniowy: 550 zł/os.</span></div><a class="zap" href="#kontakt" data-temat="Pielgrzymka" data-wyjazd="Gietrzwałd">Zapytaj o miejsca<svg viewBox="0 0 44 14" aria-hidden="true"><path d="M0 7.6h44" stroke="currentColor" stroke-width="2"/><circle cx="31" cy="7" r="5" fill="none" stroke="currentColor" stroke-width="2.5"/></svg></a></div></article>
+        <article class="wyj" id="w-meksyk"><div class="zd"><img src="img/w-meksyk-440.webp" srcset="img/w-meksyk-440.webp 440w, img/w-meksyk-720.webp 720w" sizes="(max-width:700px) 84vw, (max-width:860px) 46vw, (max-width:1180px) 31vw, 320px" width="440" height="330" alt="Pałac Sztuk Pięknych w Mexico City z góry" loading="lazy" decoding="async" draggable="false"></div><div class="tr"><h3>Meksyk</h3><p class="pod">Pielgrzymka do Bazyliki Matki Bożej z Guadalupe z wizytą w Mexico City</p><dl class="dane"><div><dt>Termin</dt><dd>10-21.11.2027</dd></div><div><dt>Długość</dt><dd>12 dni</dd></div><div><dt>Dojazd</dt><dd>samolot i autokar</dd></div></dl><div class="cena"><b>8 250 zł/os.</b><span>+ bilet lotniczy ok. 5 100 zł</span></div><a class="zap" href="#kontakt" data-temat="Pielgrzymka" data-wyjazd="Meksyk">Zapytaj o miejsca<svg viewBox="0 0 44 14" aria-hidden="true"><path d="M0 7.6h44" stroke="currentColor" stroke-width="2"/><circle cx="31" cy="7" r="5" fill="none" stroke="currentColor" stroke-width="2.5"/></svg></a></div></article>
+        <article class="wyj" id="w-medjugorie"><div class="zd"><img src="img/w-medjugorie-440.webp" srcset="img/w-medjugorie-440.webp 440w, img/w-medjugorie-720.webp 720w" sizes="(max-width:700px) 84vw, (max-width:860px) 46vw, (max-width:1180px) 31vw, 320px" width="440" height="330" alt="Figura Matki Bożej w Medjugorie" loading="lazy" decoding="async" draggable="false"></div><div class="tr"><h3>Medjugorie</h3><p class="pod">Pielgrzymka do Medjugorie, bez nocnych przejazdów</p><dl class="dane"><div><dt>Termin</dt><dd>na zapytanie</dd></div><div><dt>Długość</dt><dd>8 dni</dd></div><div><dt>Dojazd</dt><dd>autokar</dd></div></dl><div class="cena"><b>2 200 zł/os.</b></div><a class="zap" href="#kontakt" data-temat="Pielgrzymka" data-wyjazd="Medjugorie">Zapytaj o miejsca<svg viewBox="0 0 44 14" aria-hidden="true"><path d="M0 7.6h44" stroke="currentColor" stroke-width="2"/><circle cx="31" cy="7" r="5" fill="none" stroke="currentColor" stroke-width="2.5"/></svg></a></div></article>
+        <article class="wyj" id="w-ziemia"><div class="zd"><img src="img/w-ziemia-440.webp" srcset="img/w-ziemia-440.webp 440w, img/w-ziemia-720.webp 720w" sizes="(max-width:700px) 84vw, (max-width:860px) 46vw, (max-width:1180px) 31vw, 320px" width="440" height="330" alt="Bazylika Grobu Pańskiego w Jerozolimie" loading="lazy" decoding="async" draggable="false"></div><div class="tr"><h3>Ziemia Święta</h3><p class="pod">Pielgrzymka do Ziemi Świętej</p><dl class="dane"><div><dt>Termin</dt><dd>na zapytanie</dd></div><div><dt>Długość</dt><dd>8 dni</dd></div><div><dt>Dojazd</dt><dd>samolot i autokar</dd></div></dl><div class="cena"><b>od 2 900 zł</b><span>+ 560 $/os.</span></div><a class="zap" href="#kontakt" data-temat="Pielgrzymka" data-wyjazd="Ziemia Święta">Zapytaj o miejsca<svg viewBox="0 0 44 14" aria-hidden="true"><path d="M0 7.6h44" stroke="currentColor" stroke-width="2"/><circle cx="31" cy="7" r="5" fill="none" stroke="currentColor" stroke-width="2.5"/></svg></a></div></article>
+      </div>
+    </div>
+    <p class="uwaga">Terminy i ceny z obecnej strony eurotim.com.pl, stan na 16.11.2026. Pełne programy dzień po dniu, świadczenia i dopłaty - w biurze i na podstronach wyjazdów.</p>
+  </div>
+</section>
+
+<section id="oferta" aria-label="Oferta">
+  <div class="rzad" id="pielgrzymki">
+    <div class="ob"><img src="img/w-watykan-720.webp" srcset="img/w-watykan-440.webp 440w, img/w-watykan-720.webp 720w" sizes="(max-width:1023px) 100vw, 50vw" width="720" height="540" alt="Plac św. Piotra w Watykanie z lotu ptaka" loading="lazy" decoding="async"></div>
+    <div class="tx">
+      <h2>Pielgrzymki</h2>
+      <span class="trakt" aria-hidden="true"></span>
+      <p>Autokarem i samolotem - do sanktuariów Europy i świata, z czasem na uroczystości religijne i na poznanie odwiedzanych krajów. Sprawdzeni piloci, opieka duchowa i własne autokary. Na życzenie grupy przyjeżdżamy na spotkanie organizacyjne i odpowiadamy na wszystkie pytania przed wyjazdem.</p>
+      <div class="listy">
+        <div><h4>Autokarem</h4><ul><li>Włochy - Padwa, Asyż, Rzym, San Giovanni Rotondo</li><li>Bawaria</li><li>Gietrzwałd - 150. rocznica objawień</li><li>Mazury i Litwa</li><li>Medjugorie</li><li>Jesienne Góry Świętokrzyskie</li></ul></div>
+        <div><h4>Samolotem</h4><ul><li>Japonia - śladami św. Maksymiliana Kolbego</li><li>Meksyk - Guadalupe i Mexico City</li><li>Ziemia Święta</li></ul></div>
+      </div>
+      <a class="btn" href="#wyjazdy">Terminy pielgrzymek</a>
+    </div>
+  </div>
+  <div class="rzad odw" id="objazdowe">
+    <div class="ob"><img src="img/f-mt6c-900.webp" srcset="img/f-mt6c-560.webp 560w, img/f-mt6c-900.webp 900w" sizes="(max-width:1023px) 100vw, 50vw" width="900" height="600" alt="Autokar Mercedes Tourismo EURO TIM przed zamkiem" loading="lazy" decoding="async"></div>
+    <div class="tx">
+      <h2>Wycieczki objazdowe</h2>
+      <span class="trakt" aria-hidden="true"></span>
+      <p>Polska skrywa wiele miejsc związanych z kulturą i historią - pokazujemy je z bliska. Wycieczki jednodniowe i kilkudniowe: zamki, miasta, jarmarki bożonarodzeniowe i parki rozrywki, także Berlin, Praga i Drezno.</p>
+      <div class="listy">
+        <div><h4>Jednodniowe, m.in.</h4><ul><li>Gniew - Pelplin</li><li>Kupieckie opowieści Torunia</li><li>Kanał Elbląski i Elbląg</li><li>Zamek Malbork</li><li>Biskupin i Wenecja</li></ul></div>
+        <div><h4>Kilkudniowe, m.in.</h4><ul><li>Kraków i Wieliczka</li><li>Berlin i Poczdam</li><li>Praga</li><li>Kraków i Zakopane</li><li>Wrocław, Drezno i Zamek Książ</li></ul></div>
+      </div>
+      <details class="wiecej"><summary>Wszystkie wycieczki</summary>
+        <div class="listy">
+          <div><h4>Jednodniowe</h4><ul><li>Człuchów - Bytów</li><li>Warszawa - na spotkanie z Syrenką</li><li>Kwidzyn - Sztum - Malbork</li><li>Brodnica - Nidzica - Działdowo</li><li>Olsztyn - Lidzbark Warmiński - Reszel</li><li>Rejs szlakiem papieskim i Ostróda</li><li>Z wizytą na Mierzei Wiślanej</li><li>Jarmarki bożonarodzeniowe: Kraków, Gdańsk, Wrocław, Berlin, Praga, Drezno</li><li>Majaland, Szymbark i Fojutowo</li><li>Termy Maltańskie, Candy Park, Farma Alexa, Zaurolandia</li><li>Poznań, Berlin, Łódź, Wrocław, Warszawa</li><li>Suntago, Mandoria, Energylandia</li><li>Gdynia i Gdańsk, Gdańsk i Sopot</li><li>Kopalnia Soli Kłodawa, Biskupin</li></ul></div>
+          <div><h4>Kilkudniowe</h4><ul><li>Wrocław</li><li>Łódź, Sandomierz i Kazimierz Dolny</li><li>Warszawa</li><li>Kraków i Energylandia</li><li>Trójmiasto</li><li>Suntago i Warszawa</li><li>Łódź i Mandoria</li></ul></div>
+        </div>
+      </details>
+      <a class="btn" href="#kontakt" data-temat="Wycieczka objazdowa">Zapytaj o wycieczkę</a>
+    </div>
+  </div>
+  <div class="rzad" id="szkolne">
+    <div class="ob"><img src="img/szkolne-900.webp" srcset="img/szkolne-560.webp 560w, img/szkolne-900.webp 900w" sizes="(max-width:1023px) 100vw, 50vw" width="900" height="600" alt="Roześmiane dzieci leżące na trawie" loading="lazy" decoding="async"></div>
+    <div class="tx">
+      <h2>Wycieczki szkolne</h2>
+      <span class="trakt" aria-hidden="true"></span>
+      <p>Dla nauczycieli i wychowawców: wycieczki jednodniowe, dwudniowe i trzydniowe dla klas, z przejazdem naszym autokarem. Miasta, muzea, zamki, parki rozrywki i termy - program dobieramy do wieku uczniów.</p>
+      <div class="listy">
+        <div><h4>Jednodniowe, m.in.</h4><ul><li>Toruń</li><li>Zamek Malbork</li><li>Rancho pod Olszyną</li><li>Park Mandoria</li><li>Energylandia</li></ul></div>
+        <div><h4>Dwu- i trzydniowe, m.in.</h4><ul><li>Kraków i Wieliczka</li><li>Berlin i Poczdam</li><li>Trójmiasto</li><li>Wrocław i Katowice</li><li>Sandomierz, Kazimierz Dolny i Lublin</li></ul></div>
+      </div>
+      <a class="btn" href="#kontakt" data-temat="Wycieczka szkolna">Zapytaj o wycieczkę dla klasy</a>
+    </div>
+  </div>
+</section>
+
+<section class="sek ciemne na-ciemnym" id="autokary">
+  <div class="wrap">
+    <div class="glowa">
+      <div>
+        <h2>Wynajem autokarów</h2>
+        <span class="trakt" aria-hidden="true"></span>
+        <p class="opis">Od 1976 roku nieprzerwanie w transporcie i turystyce. Nowoczesne, dobrze wyposażone autokary i doświadczeni kierowcy, dla których spokój pasażerów jest równie ważny jak sama trasa. Transport dobieramy do wielkości grupy.</p>
+      </div>
+      <div class="nawig" data-tor="tor-a"><button type="button" data-k="-1" aria-label="Poprzednie autokary"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button><span class="licz" aria-live="polite"></span><button type="button" data-k="1" aria-label="Następne autokary"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button></div>
+    </div>
+    <div class="kar">
+      <div class="tor" id="tor-a">
+        <article class="auto"><div class="gal"><div class="pas"><img src="img/f-setra2-560.webp" srcset="img/f-setra2-560.webp 560w, img/f-setra2-900.webp 900w" sizes="(max-width:700px) 84vw, (max-width:860px) 46vw, (max-width:1180px) 31vw, 320px" width="560" height="373" alt="Setra 517 HD EURO TIM pod wieżą Eiffla" loading="lazy" decoding="async" draggable="false"></div></div><div class="tr"><h3>Setra 517 HD</h3><p>Autokar wysokopokładowy, oznaczenie S 2</p><div class="miejsca"><b>61+3</b><span>miejsc</span></div></div></article>
+        <article class="auto"><div class="gal"><div class="pas"><img src="img/f-setra4-560.webp" srcset="img/f-setra4-560.webp 560w, img/f-setra4-900.webp 900w" sizes="(max-width:700px) 84vw, (max-width:860px) 46vw, (max-width:1180px) 31vw, 320px" width="560" height="373" alt="Setra 517 HD EURO TIM przy zamku" loading="lazy" decoding="async" draggable="false"></div></div><div class="tr"><h3>Setra 517 HD</h3><p>Autokar wysokopokładowy, oznaczenie S 4</p><div class="miejsca"><b>59+3</b><span>miejsc</span></div></div></article>
+        <article class="auto"><div class="gal"><div class="pas"><img src="img/f-setra3-560.webp" srcset="img/f-setra3-560.webp 560w, img/f-setra3-900.webp 900w" sizes="(max-width:700px) 84vw, (max-width:860px) 46vw, (max-width:1180px) 31vw, 320px" width="560" height="373" alt="Setra 517 HD EURO TIM przed siedzibą firmy" loading="lazy" decoding="async" draggable="false"></div></div><div class="tr"><h3>Setra 517 HD</h3><p>Autokar wysokopokładowy, oznaczenie S 3</p><div class="miejsca"><b>57+3</b><span>miejsc</span></div></div></article>
+        <article class="auto"><div class="gal"><div class="pas"><img src="img/f-mt1-560.webp" srcset="img/f-mt1-560.webp 560w, img/f-mt1-900.webp 900w" sizes="(max-width:700px) 84vw, (max-width:860px) 46vw, (max-width:1180px) 31vw, 320px" width="560" height="373" alt="Żółty Mercedes Tourismo EURO TIM" loading="lazy" decoding="async" draggable="false"></div></div><div class="tr"><h3>Mercedes Tourismo 17 RHD-L</h3><p>Autokar turystyczny, oznaczenie MT 1</p><div class="miejsca"><b>57+3</b><span>miejsc</span></div></div></article>
+        <article class="auto"><div class="gal"><div class="pas" data-gal><img src="img/f-mt6-560.webp" srcset="img/f-mt6-560.webp 560w, img/f-mt6-900.webp 900w" sizes="(max-width:700px) 84vw, (max-width:860px) 46vw, (max-width:1180px) 31vw, 320px" width="560" height="373" alt="Mercedes Tourismo EURO TIM w porcie" loading="lazy" decoding="async" draggable="false"><img src="img/f-mt6b-560.webp" srcset="img/f-mt6b-560.webp 560w, img/f-mt6b-900.webp 900w" sizes="(max-width:700px) 84vw, (max-width:860px) 46vw, (max-width:1180px) 31vw, 320px" width="560" height="373" alt="Dwa autokary Mercedes Tourismo EURO TIM" loading="lazy" decoding="async" draggable="false"><img src="img/f-mt6c-560.webp" srcset="img/f-mt6c-560.webp 560w, img/f-mt6c-900.webp 900w" sizes="(max-width:700px) 84vw, (max-width:860px) 46vw, (max-width:1180px) 31vw, 320px" width="560" height="373" alt="Mercedes Tourismo EURO TIM przed zamkiem" loading="lazy" decoding="async" draggable="false"><img src="img/f-mt6d-560.webp" srcset="img/f-mt6d-560.webp 560w, img/f-mt6d-900.webp 900w" sizes="(max-width:700px) 84vw, (max-width:860px) 46vw, (max-width:1180px) 31vw, 320px" width="560" height="373" alt="Mercedes Tourismo EURO TIM pod piniami" loading="lazy" decoding="async" draggable="false"></div><div class="kropki" aria-hidden="true"><i></i><i></i><i></i><i></i></div></div><div class="tr"><h3>Mercedes Tourismo 15 RHD</h3><p>Autokar turystyczny, oznaczenie MT 6 - MT 10, 5 autokarów</p><div class="miejsca"><b>51+2</b><span>miejsc</span></div></div></article>
+        <article class="auto"><div class="gal"><div class="pas"><img src="img/f-crafter-560.webp" srcset="img/f-crafter-560.webp 560w, img/f-crafter-900.webp 900w" sizes="(max-width:700px) 84vw, (max-width:860px) 46vw, (max-width:1180px) 31vw, 320px" width="560" height="373" alt="Bus Volkswagen Crafter EURO TIM w górach" loading="lazy" decoding="async" draggable="false"></div></div><div class="tr"><h3>Volkswagen Crafter</h3><p>Dla mniejszych grup, oznaczenie bus</p><div class="miejsca"><b>20+2</b><span>miejsc</span></div></div></article>
+      </div>
+    </div>
+    <div class="kontakt-auto">
+      <div><strong>Sprawdzimy dostępność terminu</strong><p>Przygotujemy propozycję dopasowaną do trasy i liczby osób. E-mail: <a href="mailto:autokary@eurotim.pl">autokary@eurotim.pl</a></p></div>
+      <div><p>W godzinach pracy: <a href="tel:+48523404108">52 340 41 08</a> wew. 024<br>Pilne, całą dobę: <a href="tel:+48723188152">723 188 152</a>, <a href="tel:+48723188153">723 188 153</a></p></div>
+      <a class="btn" href="#kontakt" data-temat="Wynajem autokaru">Zapytaj o autokar</a>
+    </div>
+  </div>
+</section>
+
+<section class="sek" id="o-firmie">
+  <div class="wrap">
+    <div class="firma">
+      <div>
+        <h2>Turystyka i Motoryzacja</h2>
+        <span class="trakt" aria-hidden="true"></span>
+        <p>Tak rozwija się skrót TiM w nazwie firmy, którą w 1976 roku założył Edward Niedbalski. Przy ul. Inowrocławskiej 35 w Bydgoszczy działają biuro podróży i wynajem autokarów, a obok, niezależnie, część motoryzacyjna: hurtownia części, warsztaty, stacja kontroli pojazdów i myjnia (<a href="http://www.eurotim-moto.pl/" rel="noopener">eurotim-moto.pl</a>).</p>
+        <p>Organizujemy wyjazdy krajowe i zagraniczne - od pielgrzymek, przez wycieczki objazdowe i szkolne, po wyjazdy na narty. Sprzedajemy też oferty innych biur podróży, bilety autokarowe i lotnicze oraz ubezpieczenia w podróży.</p>
+      </div>
+      <figure class="zd" style="margin:0"><img src="img/biuro-900.webp" srcset="img/biuro-560.webp 560w, img/biuro-900.webp 900w" sizes="(max-width:1023px) 100vw, 50vw" width="900" height="600" alt="Siedziba EURO TIM przy ul. Inowrocławskiej 35 w Bydgoszczy" loading="lazy" decoding="async"><figcaption>Siedziba firmy, ul. Inowrocławska 35, Bydgoszcz</figcaption></figure>
+    </div>
+    <blockquote>
+      <p>„Jako misję obraliśmy nie tylko pokazywanie piękna otaczającego nas świata jako celu podróży, ale samego podróżowania jako celu samego w sobie.”</p>
+      <footer>z misji firmy EURO TIM</footer>
+    </blockquote>
+  </div>
+</section>
+
+<section class="sek szare" id="rezerwacja">
+  <div class="wrap">
+    <div class="glowa"><div><h2>Jak zarezerwować wyjazd</h2><span class="trakt" aria-hidden="true"></span></div></div>
+    <div class="kroki">
+      <div><h3>W biurze</h3><p>Przy ul. Inowrocławskiej 35 pokażemy pełną dokumentację wyjazdu i ustalimy szczegóły. Można też podać telefonicznie symbol imprezy i dane - umowa będzie czekać w biurze.</p></div>
+      <div><h3>Przez internet</h3><p>Wystarczy przesłać wypełnioną Umowę-Zgłoszenie. Na podany e-mail odeślemy propozycję umowy z warunkami uczestnictwa do sprawdzenia i podpisu.</p></div>
+      <div><h3>Płatność</h3><p>Gotówką w biurze albo przelewem. Rezerwację potwierdza otrzymanie kopii dowodu wpłaty - przy rezerwacji internetowej razem z umową na travel@eurotim.pl.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="sek" id="kontakt">
+  <div class="wrap">
+    <div class="glowa"><div><h2>Kontakt</h2><span class="trakt" aria-hidden="true"></span></div></div>
+    <div class="kont">
+      <div>
+        <div class="dzial"><h3>Biuro podróży i obsługa klientów</h3><p>tel. <a href="tel:+48523404108">52 340 41 08</a>, kom. <a href="tel:+48723188150">723 188 150</a><br><a href="mailto:travel@eurotim.pl">travel@eurotim.pl</a>, <a href="mailto:info@eurotim.pl">info@eurotim.pl</a></p></div>
+        <div class="dzial"><h3>Wynajem autokarów</h3><p>tel. <a href="tel:+48523404108">52 340 41 08</a> wew. 024, pilne 24 h: <a href="tel:+48723188152">723 188 152</a>, <a href="tel:+48723188153">723 188 153</a><br><a href="mailto:autokary@eurotim.pl">autokary@eurotim.pl</a></p></div>
+        <p class="adres">ul. Inowrocławska 35/1, 85-153 Bydgoszcz</p>
+        <div class="mapa" id="mapa" data-src="https://www.google.com/maps?q=Inowroc%C5%82awska+35,+85-153+Bydgoszcz&amp;output=embed"></div>
+      </div>
+      <form class="form" id="form" novalidate>
+        <h3>Zapytanie</h3>
+        <p class="p">O wolne miejsca, wycieczkę dla grupy albo wynajem autokaru.</p>
+        <div class="pola">
+          <div class="pole"><label for="f-im">Imię i nazwisko</label><input id="f-im" name="imie" autocomplete="name"></div>
+          <div class="pole"><label for="f-tel">Telefon lub e-mail</label><input id="f-tel" name="kontakt" autocomplete="tel"></div>
+          <div class="pole cale"><label for="f-tem">Temat</label><select id="f-tem" name="temat"><option>Pielgrzymka</option><option>Wycieczka objazdowa</option><option>Wycieczka szkolna</option><option>Wynajem autokaru</option><option>Inne</option></select></div>
+          <div class="pole cale"><label for="f-tr">Wiadomość</label><textarea id="f-tr" name="tresc" placeholder="Np. termin, liczba osób, trasa"></textarea></div>
+        </div>
+        <button class="btn" type="submit">Wyślij zapytanie</button>
+        <p class="info">Podgląd koncepcji: formularz nie wysyła wiadomości.</p>
+        <p class="ok" id="ok" hidden>To podgląd strony - na docelowej stronie zapytanie trafi od razu do biura.</p>
+      </form>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="stopka">
+  <div class="wrap">
+    <div class="g">
+      <div>
+        <a class="logo" href="#" aria-label="EURO TIM - do góry"><picture><source srcset="img/logo-44.webp 1x, img/logo-88.webp 2x" type="image/webp"><img src="img/logo-44.png" width="228" height="26" alt="EURO TIM" loading="lazy"></picture></a>
+        <p style="margin-top:16px">EURO TIM sp. z o.o.<br>ul. Inowrocławska 35/1, 85-153 Bydgoszcz<br>NIP 953 280 86 12, KRS 0001147667</p>
+      </div>
+      <div><h4>Oferta</h4><ul><li><a href="#pielgrzymki">Pielgrzymki</a></li><li><a href="#objazdowe">Wycieczki objazdowe</a></li><li><a href="#szkolne">Wycieczki szkolne</a></li><li><a href="#autokary">Wynajem autokarów</a></li></ul></div>
+      <div><h4>Informacje</h4><ul><li><a href="#rezerwacja">Jak rezerwować</a></li><li><a href="#o-firmie">O firmie</a></li><li><a href="#kontakt">Kontakt</a></li><li><a href="https://www.facebook.com/eurotim.biuro" rel="noopener">Facebook</a></li></ul></div>
+      <div><h4>Kontakt</h4><ul><li><a href="tel:+48523404108">52 340 41 08</a></li><li><a href="tel:+48723188150">723 188 150</a></li><li><a href="mailto:travel@eurotim.pl">travel@eurotim.pl</a></li></ul></div>
+    </div>
+    <div class="dol">
+      <span>© 2026 EURO TIM sp. z o.o. Zdjęcia: EURO TIM (eurotim.com.pl). Podgląd koncepcji strony.</span>
+      <a class="wylinka-badge" href="https://wylinka.pl/?utm_source=eurotim.com.pl&amp;utm_medium=stopka&amp;utm_campaign=wykonanie" rel="noopener" title="Strona wykonana przez Wylinka"><svg viewBox="0 0 64 64" aria-hidden="true" focusable="false" fill="currentColor"><path d="M9.8 22.8l-1.2-7.9 2.2-3.7 15.5 4.6-.5 1.5-7.2 5.5 4.7 15.6 5-15.6 7 0 4.1 12.7-4.2-.9-2.6 1.8-.8-2.2-5.3 15.6-4.3 0 .4 .2-2.1 2.8-1.3-1.1 1.1-1.4-3.1 .2-.1-1.7 2.2-.1-5.7-16.5-4.8 .6-.8 3.1 0 .5-.3 .5 .8 2.2-1.6 .5-.4-1.3-.8 1.6-1.5-.8 .8-1.6-1.4 .6-.6-1.6 2.3-.8 .2-.4 1.3-4.8 5.9-.8-2.4-6.9zM15.2 13.7l-.1-.4-.4 .8-.1 .8 .1 1 .1 .4 .3 .7 .3-.9 .1-.7 0-.8z"/><path class="wy-pod" d="M37.1 49.8l-4.5-13.3 2.6-1.8 4.2 .9 .9 2.8 3-9.7 0-.5 .1-.8 3.2-8.4 .5-1 .6-1 .9-1.1 1.3-1 1.1-.7 1.4-.5 1.4-.3 .7 0 .9 0 1.2 .3 1.4 .6 .8 .5 .7 .7 .6 .7 .5 .9 .3 .9 .1 .9 0 .8-.2 .9-.5 .9-.5 .6-.7 .5-.7 .3-.1-.1 0-.1 .5-.5 .3-.7 .2-.5 0-.6-.1-.6-.3-.7-.4-.5-.4-.4-.5-.3-.6-.3-.7 0-.7 .1-.6 .1-.5 .4-.5 .5-.3 .5-.2 .7-.1 1.5-1.4 5.1-.8 3.3-.3 .7-.5 .7-6 17.5 1.9 .1-.1 1.7-3.1-.2 1.1 1.4-1.3 1.1-2.1-2.8 .4-.2z"/><path class="wy-old" d="M40.8 50l.4-.2-4.1 0-4.2-12.5 2.5-1.7 4.3 .9 .6 1.9 .6-1.6 0-.3 2.4-7.8 0-.5 .1-.8 3.2-8.4 .4-.8 .6-.9 .9-1.2 .9-.9 1.3-.8 1.4-.6 1.2-.3 1.4-.1 1.3 .1 .6 .2 .8 .3 1.1 .6 .9 .7 .7 .9 .5 .9 .3 .9 .1 1.1-.1 .9-.3 .9-.4 .7-.6 .7-.6 .4-.6 .2-.1-.1 0-.1 .5-.5 .3-.7 .2-.5 0-.5-.1-.6-.2-.6-.3-.5-.4-.5-.5-.3-.6-.3-.7-.1-.6 0-.6 .1-.6 .3-.6 .5-.3 .4-.2 .5-.1 .5-.1 1.5-1.4 5.1-.8 3.3-.3 .7-.5 .7-6 17.5 1.9 .1-.1 1.7-3.1-.2 1.1 1.4-1.3 1.1zM49.6 17.1l.6 1.7-1.5 1.9 .4 .4 1.8-2.1-.7-2.1zM48.1 28.3l.5 1.8-1.7 1.8 .4 .4 1.9-2-.6-2.2zM37.9 41.7l1.7-1.5-.4-.4-1.7 1.4zM42.6 38.7l-1.5 2.8 1.1 2-1.3 2.6 .5 .2 1.5-2.8-1.1-2 1.4-2.5z"/></svg><span>wykonanie: <b>Wylinka</b></span></a>
+    </div>
+  </div>
+</footer>
+
+<div class="mob" id="mob" aria-hidden="true"><a href="tel:+48523404108" tabindex="-1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6.6 3.5 9.4 4l1.3 4-2.2 1.6a12 12 0 0 0 5.9 5.9l1.6-2.2 4 1.3.5 2.8c.1.8-.5 1.6-1.3 1.6A16.6 16.6 0 0 1 3.5 5c0-.8.8-1.6 1.6-1.5Z"/></svg>Zadzwoń</a><a href="#kontakt" tabindex="-1">Zapytanie</a></div>
+<script src="app.js" defer></script>
+</body>
+</html>
