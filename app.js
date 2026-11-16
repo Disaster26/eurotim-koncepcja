@@ -1,7 +1,7 @@
 (function(){
   var top=document.getElementById('top'),bg=document.getElementById('burger');
-  function sc(){top.classList.toggle('sc',window.scrollY>8);if(window.scrollY<300)document.querySelectorAll('.menu a.on').forEach(function(l){l.classList.remove('on')})}
-  window.addEventListener('scroll',sc,{passive:true});sc();
+  function sc(){var y=window.scrollY;top.classList.toggle('sc',y>8);if(y<300)document.querySelectorAll('.menu a.on').forEach(function(l){l.classList.remove('on')})}
+  window.addEventListener('scroll',sc,{passive:true});requestAnimationFrame(sc);
   function zamknij(){top.classList.remove('open');bg.setAttribute('aria-expanded','false');bg.setAttribute('aria-label','Otwórz menu')}
   bg.addEventListener('click',function(){var o=top.classList.toggle('open');bg.setAttribute('aria-expanded',o);bg.setAttribute('aria-label',o?'Zamknij menu':'Otwórz menu')});
   document.querySelectorAll('.menu a').forEach(function(a){a.addEventListener('click',zamknij)});
@@ -20,7 +20,7 @@
     function upd(){var w=krok(tor),n=tor.children.length,vis=Math.max(1,Math.round(tor.clientWidth/w)),i=Math.round(tor.scrollLeft/w);
       if(licz)licz.textContent=Math.min(n,i+1)+'-'+Math.min(n,i+vis)+' z '+n;
       if(bs.length){bs[0].disabled=tor.scrollLeft<4;bs[1].disabled=tor.scrollLeft+tor.clientWidth>=tor.scrollWidth-4}}
-    tor.addEventListener('scroll',function(){window.requestAnimationFrame(upd)},{passive:true});window.addEventListener('resize',upd);upd();
+    tor.addEventListener('scroll',function(){window.requestAnimationFrame(upd)},{passive:true});window.addEventListener('resize',upd);window.addEventListener('load',function(){requestAnimationFrame(upd)});
     [].forEach.call(bs,function(b){b.addEventListener('click',function(){tor.scrollBy({left:krok(tor)*(+b.dataset.k),behavior:'smooth'})})});
     var down=false,sx=0,sl=0,moved=false;
     tor.addEventListener('pointerdown',function(e){if(e.pointerType!=='mouse'||e.target.closest('.pas[data-gal]'))return;down=true;moved=false;sx=e.clientX;sl=tor.scrollLeft});
@@ -33,7 +33,7 @@
   document.querySelectorAll('.pas[data-gal]').forEach(function(p){
     var dots=p.parentNode.querySelectorAll('.kropki i');
     function u(){var i=Math.round(p.scrollLeft/p.clientWidth);[].forEach.call(dots,function(d,j){d.classList.toggle('on',j===i)})}
-    p.addEventListener('scroll',function(){window.requestAnimationFrame(u)},{passive:true});u();
+    p.addEventListener('scroll',function(){window.requestAnimationFrame(u)},{passive:true});window.addEventListener('load',function(){requestAnimationFrame(u)});
     var down=false,sx=0,sl=0;
     p.addEventListener('pointerdown',function(e){if(e.pointerType!=='mouse')return;down=true;sx=e.clientX;sl=p.scrollLeft;p.style.scrollSnapType='none'});
     window.addEventListener('pointermove',function(e){if(down)p.scrollLeft=sl-(e.clientX-sx)});
